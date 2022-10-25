@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:App6.View"
+             x:Class="App6.MainPage">
+
+    <FlyoutItem Title="Первая вкладка">
+        <ShellContent Route="First Page" Title="Первая верхняя вкладка" 
+                      ContentTemplate="{DataTemplate local:FPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Вторая вкладка">
+        <ShellContent Route="Second Page"
+                      ContentTemplate="{DataTemplate local:SPage}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Третья вкладка">
+        <ShellContent Route="Third Page"
+                      ContentTemplate="{DataTemplate local:SheltersPage}"/>
+    </FlyoutItem>
+    <MenuItem Text="Выйти" Clicked="MenuItem_Clicked"/>
+
+    <TabBar>
+        <ShellContent Route="LoginPage"
+                      ContentTemplate="{DataTemplate local:LoginPage}"/>
+    </TabBar>
+</Shell>
